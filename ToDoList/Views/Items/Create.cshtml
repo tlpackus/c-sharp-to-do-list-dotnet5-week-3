@@ -10,6 +10,9 @@
     @Html.LabelFor(model => model.Description)
     @Html.TextBoxFor(model => model.Description)
 
+    @Html.Label("Enter due date")
+    @Html.TextBoxFor(model => model.DueDate, new { @type = "date", @class = "form-control datepicker" })
+
     @Html.Label("Select Category")
     @Html.DropDownList("CategoryId")
 
