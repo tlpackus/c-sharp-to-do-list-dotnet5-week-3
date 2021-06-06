@@ -102,7 +102,7 @@ namespace ToDoList.Controllers
     [HttpPost]
     public ActionResult DeleteCategory(int joinId)
     {
-      var joinEntry = _db.CategoryItem.FirstOrDefault(entry => entry.CategoryItemId == joinId);
+      CategoryItem joinEntry = _db.CategoryItem.FirstOrDefault(entry => entry.CategoryItemId == joinId);
       int itemId = joinEntry.ItemId;
       _db.CategoryItem.Remove(joinEntry);
       _db.SaveChanges();
